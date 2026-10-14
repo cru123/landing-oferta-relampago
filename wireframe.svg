@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1180" font-family="Arial, sans-serif" font-size="14">
+  <rect width="900" height="1180" fill="#ffffff"/>
+  <text x="450" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#222">Wireframe baja fidelidad · Landing Oferta Relámpago</text>
+  <text x="450" y="56" text-anchor="middle" fill="#666">Escritorio (izquierda) y móvil (derecha) · orden de scroll de arriba hacia abajo</text>
+
+  <!-- ESCRITORIO -->
+  <g stroke="#555" stroke-width="2" fill="none">
+    <rect x="30" y="80" width="560" height="40"/>
+    <rect x="30" y="130" width="560" height="270"/>
+    <rect x="30" y="410" width="560" height="380"/>
+    <rect x="30" y="800" width="560" height="140"/>
+    <rect x="30" y="950" width="560" height="120"/>
+    <rect x="30" y="1080" width="560" height="70"/>
+  </g>
+  <g fill="#222">
+    <text x="45" y="105">Logo texto · "Proyecto académico"</text>
+    <text x="45" y="152" font-weight="bold">1. HERO</text>
+    <text x="310" y="180" text-anchor="middle">[ pill: Oferta Relámpago ]</text>
+    <text x="310" y="212" text-anchor="middle" font-size="18" font-weight="bold">Titular: ¡Hola! Oferta Relámpago para ti</text>
+    <text x="310" y="238" text-anchor="middle">Subtítulo: precios exclusivos por 48 horas</text>
+    <text x="45" y="432" font-weight="bold">2. OFERTAS (2 tarjetas)</text>
+    <text x="45" y="822" font-weight="bold">3. BENEFICIOS</text>
+    <text x="45" y="972" font-weight="bold">4. CIERRE</text>
+    <text x="45" y="1102" font-weight="bold">5. PIE</text>
+    <text x="310" y="1125" text-anchor="middle">Aviso académico · sin datos personales · créditos fotos</text>
+  </g>
+  <!-- contador -->
+  <g stroke="#555" stroke-width="2" fill="#eee">
+    <rect x="200" y="258" width="60" height="50"/><rect x="280" y="258" width="60" height="50"/><rect x="360" y="258" width="60" height="50"/>
+  </g>
+  <g fill="#222" text-anchor="middle"><text x="230" y="288">HH</text><text x="310" y="288">MM</text><text x="390" y="288">SS</text>
+    <text x="310" y="328">Aviso: expira al finalizar el contador</text></g>
+  <rect x="245" y="345" width="130" height="36" rx="18" fill="none" stroke="#555" stroke-width="2"/>
+  <text x="310" y="368" text-anchor="middle" fill="#222">Ver mis 2 ofertas ↓</text>
+
+  <!-- tarjetas escritorio -->
+  <g stroke="#555" stroke-width="2" fill="none">
+    <rect x="60" y="450" width="240" height="320"/><rect x="320" y="450" width="240" height="320"/>
+    <line x1="60" y1="450" x2="300" y2="580"/><line x1="300" y1="450" x2="60" y2="580"/>
+    <line x1="320" y1="450" x2="560" y2="580"/><line x1="560" y1="450" x2="320" y2="580"/>
+    <line x1="60" y1="580" x2="300" y2="580"/><line x1="320" y1="580" x2="560" y2="580"/>
+  </g>
+  <g fill="#222" text-anchor="middle">
+    <text x="180" y="604" font-weight="bold">Río de Janeiro, Brasil</text><text x="180" y="624" font-size="12">Vuelo directo desde Santiago</text>
+    <text x="180" y="652" text-decoration="line-through" fill="#888">$ antes</text><text x="180" y="680" font-size="20" font-weight="bold">$ oferta</text><text x="180" y="700" font-size="12">o millas</text>
+    <text x="440" y="604" font-weight="bold">Cusco, Perú</text><text x="440" y="624" font-size="12">Ida y vuelta desde Santiago</text>
+    <text x="440" y="652" text-decoration="line-through" fill="#888">$ antes</text><text x="440" y="680" font-size="20" font-weight="bold">$ oferta</text><text x="440" y="700" font-size="12">o millas</text>
+  </g>
+  <g fill="#bbb" stroke="#333" stroke-width="2"><rect x="115" y="718" width="130" height="36" rx="18"/><rect x="375" y="718" width="130" height="36" rx="18"/></g>
+  <g fill="#000" text-anchor="middle" font-weight="bold"><text x="180" y="741">CTA Reservar ahora</text><text x="440" y="741">CTA Reservar ahora</text></g>
+
+  <!-- beneficios -->
+  <g stroke="#555" stroke-width="2" fill="none"><circle cx="140" cy="870" r="20"/><circle cx="310" cy="870" r="20"/><circle cx="480" cy="870" r="20"/></g>
+  <g fill="#222" text-anchor="middle" font-size="12"><text x="140" y="912">Acumula millas</text><text x="310" y="912">Flexibilidad</text><text x="480" y="912">Red más conectada</text></g>
+
+  <!-- cierre -->
+  <text x="310" y="1000" text-anchor="middle" fill="#222">Urgencia: "Quedan X horas"</text>
+  <g fill="#bbb" stroke="#333" stroke-width="2"><rect x="160" y="1018" width="140" height="36" rx="18"/><rect x="320" y="1018" width="140" height="36" rx="18"/></g>
+  <g fill="#000" text-anchor="middle" font-weight="bold" font-size="12"><text x="230" y="1041">CTA Reservar · Río</text><text x="390" y="1041">CTA Reservar · Cusco</text></g>
+
+  <!-- MÓVIL -->
+  <rect x="640" y="80" width="230" height="1070" rx="18" fill="none" stroke="#555" stroke-width="2"/>
+  <g stroke="#555" stroke-width="1.5" fill="none">
+    <rect x="655" y="100" width="200" height="20"/>
+    <rect x="655" y="128" width="200" height="200"/>
+    <rect x="655" y="336" width="200" height="250"/>
+    <rect x="655" y="594" width="200" height="250"/>
+    <rect x="655" y="852" width="200" height="130"/>
+    <rect x="655" y="990" width="200" height="90"/>
+    <rect x="655" y="1088" width="200" height="45"/>
+  </g>
+  <g fill="#222" font-size="12" text-anchor="middle">
+    <text x="755" y="115">Logo</text>
+    <text x="755" y="160" font-weight="bold">HERO</text><text x="755" y="182">Titular + subtítulo</text><text x="755" y="220">[HH][MM][SS]</text><text x="755" y="290">( Ver mis 2 ofertas )</text>
+    <text x="755" y="360" font-weight="bold">Tarjeta Río</text><text x="755" y="430">[ foto ]</text><text x="755" y="510">$ antes / $ oferta</text><text x="755" y="560" font-weight="bold">[ CTA Reservar ahora ]</text>
+    <text x="755" y="618" font-weight="bold">Tarjeta Cusco</text><text x="755" y="688">[ foto ]</text><text x="755" y="768">$ antes / $ oferta</text><text x="755" y="818" font-weight="bold">[ CTA Reservar ahora ]</text>
+    <text x="755" y="876" font-weight="bold">BENEFICIOS</text><text x="755" y="900">(apilados)</text>
+    <text x="755" y="1014" font-weight="bold">CIERRE</text><text x="755" y="1040">[ CTA Río ]</text><text x="755" y="1064">[ CTA Cusco ]</text>
+    <text x="755" y="1115">PIE · aviso académico</text>
+  </g>
+
+  <!-- leyenda -->
+  <rect x="30" y="1158" width="18" height="14" fill="#bbb" stroke="#333"/>
+  <text x="56" y="1170" fill="#222" font-size="12">= CTA principal (evento clic_cta_principal → abre página de gracias)</text>
+</svg>

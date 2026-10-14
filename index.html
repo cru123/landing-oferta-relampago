@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- GOOGLE ANALYTICS AQUÍ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta Relámpago · Río de Janeiro y Cusco por 48 horas</title>
+<meta name="description" content="Proyecto académico ficticio: landing de Oferta Relámpago de 48 horas a Río de Janeiro y Cusco desde Santiago.">
+<style>
+  :root {
+    --azul: #1b0088;
+    --azul-claro: #3d3aff;
+    --lila: #d9d6ff;
+    --coral: #e8114b;
+    --gris-fondo: #f4f3fb;
+    --texto: #2a2a2a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Trebuchet MS", Arial, sans-serif; color: var(--texto); background: #fff; line-height: 1.5; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .contenedor { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* Botones */
+  .btn { display: inline-block; text-decoration: none; font-weight: bold; border-radius: 28px; padding: 14px 30px; font-size: 16px; min-height: 48px; text-align: center; cursor: pointer; border: 0; }
+  .btn-coral { background: var(--coral); color: #fff; }
+  .btn-coral:hover, .btn-coral:focus-visible { background: #c40d3e; }
+  .btn-borde { background: transparent; color: #fff; border: 2px solid #fff; }
+  .btn-borde:hover, .btn-borde:focus-visible { background: rgba(255,255,255,.12); }
+  :focus-visible { outline: 3px solid #ffb3c7; outline-offset: 2px; }
+
+  /* Encabezado */
+  .barra { background: #fff; border-top: 8px solid var(--azul); }
+  .barra .contenedor { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; padding-bottom: 14px; }
+  .marca { color: var(--azul); font-weight: bold; font-size: 20px; letter-spacing: 1px; text-decoration: none; }
+  .marca span { color: var(--coral); }
+  .etiqueta-demo { font-size: 12px; color: #555; }
+
+  /* Hero */
+  #hero { background: var(--azul); color: #fff; text-align: center; padding: 48px 0 56px; }
+  .pill { display: inline-block; background: var(--azul-claro); font-size: 14px; font-weight: bold; padding: 6px 16px; border-radius: 16px; }
+  #hero h1 { font-size: clamp(26px, 5vw, 40px); line-height: 1.2; margin: 18px auto 12px; max-width: 760px; }
+  #hero .sub { color: var(--lila); font-size: clamp(15px, 2.4vw, 18px); max-width: 620px; margin: 0 auto 28px; }
+  .contador { display: flex; justify-content: center; align-items: center; gap: 10px; }
+  .caja { width: 92px; background: #fff; color: var(--azul); border-radius: 10px; padding: 12px 0 8px; }
+  .caja.seg { background: var(--coral); color: #fff; }
+  .caja b { display: block; font-family: "Courier New", monospace; font-size: 40px; line-height: 1; }
+  .caja small { font-size: 12px; text-transform: uppercase; }
+  .dos-puntos { font-size: 32px; font-weight: bold; }
+  .alerta { margin: 16px 0 28px; font-size: 14px; }
+
+  /* Ofertas */
+  #ofertas { padding: 56px 0 24px; }
+  .titulo-seccion { text-align: center; color: var(--azul); font-size: clamp(22px, 3.5vw, 28px); }
+  .bajada { text-align: center; color: #555; margin: 6px 0 32px; }
+  .tarjetas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 860px; margin: 0 auto; }
+  .tarjeta { border: 1px solid #ddd; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .tarjeta img { width: 100%; aspect-ratio: 7 / 4; object-fit: cover; }
+  .tarjeta .cabecera { background: var(--azul); color: #fff; padding: 16px 20px; }
+  .tarjeta .opcion { font-size: 12px; font-weight: bold; font-style: italic; color: #ffb3c7; }
+  .tarjeta h3 { font-size: 22px; }
+  .tarjeta .ruta { font-size: 14px; color: var(--lila); margin-top: 4px; }
+  .tarjeta .precio { padding: 20px; text-align: center; margin-top: auto; }
+  .antes { color: #666; text-decoration: line-through; font-size: 15px; }
+  .sello { display: inline-block; background: var(--coral); color: #fff; font-size: 12px; font-weight: bold; font-style: italic; padding: 2px 8px; border-radius: 4px; margin-top: 6px; }
+  .ahora { font-size: 36px; font-weight: bold; color: var(--azul); line-height: 1.2; }
+  .ahora small { font-size: 15px; font-weight: normal; }
+  .millas { font-size: 14px; color: #555; margin-bottom: 16px; }
+  .ahorro { font-size: 13px; color: var(--coral); font-weight: bold; margin-bottom: 4px; }
+
+  /* Beneficios */
+  #beneficios { padding: 40px 0; }
+  .beneficios { background: var(--gris-fondo); border-radius: 14px; padding: 28px 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 860px; margin: 0 auto; text-align: center; }
+  .beneficios h2 { grid-column: 1 / -1; color: var(--azul); font-size: 20px; }
+  .beneficio svg { width: 40px; height: 40px; margin: 0 auto 8px; }
+  .beneficio h3 { color: var(--azul); font-size: 16px; }
+  .beneficio p { font-size: 14px; color: #555; }
+
+  /* Cierre */
+  #cierre { background: var(--azul); color: #fff; text-align: center; padding: 48px 0; }
+  #cierre h2 { font-size: clamp(22px, 3.5vw, 30px); margin-bottom: 8px; }
+  #cierre p { color: var(--lila); margin-bottom: 24px; }
+  .botones-cierre { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+  /* Pie */
+  footer { background: #12005c; color: var(--lila); text-align: center; padding: 28px 0 32px; font-size: 13px; }
+  footer p { margin-top: 8px; }
+  .aviso { color: #fff; font-weight: bold; }
+
+  /* Página de gracias */
+  #gracias { position: fixed; inset: 0; background: rgba(18, 0, 92, .85); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 10; }
+  #gracias.visible, #gracias:target { display: flex; }
+  .gracias-caja { background: #fff; border-radius: 16px; max-width: 460px; width: 100%; padding: 36px 28px; text-align: center; border-top: 8px solid var(--coral); }
+  .gracias-caja svg { width: 56px; height: 56px; margin: 0 auto 12px; }
+  .gracias-caja h2 { color: var(--azul); font-size: 24px; margin-bottom: 10px; }
+  .gracias-caja p { color: #555; margin-bottom: 8px; }
+  .gracias-caja .nota { font-size: 12px; color: #666; margin: 16px 0 20px; }
+
+  @media (max-width: 680px) {
+    .tarjetas, .beneficios { grid-template-columns: 1fr; }
+    .caja { width: 72px; }
+    .caja b { font-size: 32px; }
+    .etiqueta-demo { display: none; }
+    .botones-cierre .btn { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="contenedor">
+    <a class="marca" href="#hero"><span>/</span> LATAM</a>
+    <span class="etiqueta-demo">Proyecto académico · Taller Marketing Analytics</span>
+  </div>
+</header>
+
+<main>
+
+  <section id="hero">
+    <div class="contenedor">
+      <span class="pill">⚡ Oferta Relámpago</span>
+      <h1>¡Hola, viajero! Tenemos una Oferta Relámpago para ti</h1>
+      <p class="sub">Sabemos cuáles son tus próximos destinos soñados. Aprovecha precios exclusivos por solo 48 horas.</p>
+
+      <div class="contador" role="timer" aria-label="Tiempo restante de la oferta">
+        <div class="caja"><b id="horas">47</b><small>hrs</small></div>
+        <span class="dos-puntos" aria-hidden="true">:</span>
+        <div class="caja"><b id="minutos">59</b><small>min</small></div>
+        <span class="dos-puntos" aria-hidden="true">:</span>
+        <div class="caja seg"><b id="segundos">59</b><small>seg</small></div>
+      </div>
+      <p class="alerta">⚠️ La oferta expira al finalizar el contador</p>
+
+      <a class="btn btn-borde" href="#ofertas">Ver mis 2 ofertas</a>
+    </div>
+  </section>
+
+  <section id="ofertas">
+    <div class="contenedor">
+      <h2 class="titulo-seccion">¡Seleccionamos los mejores para ti!</h2>
+      <p class="bajada">Basado en tus búsquedas recientes</p>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <img src="img/rio.jpg" alt="Vista aérea de Río de Janeiro con la bahía y el Pan de Azúcar" width="560" height="320">
+          <div class="cabecera">
+            <span class="opcion">Opción 1</span>
+            <h3>Río de Janeiro, Brasil</h3>
+            <p class="ruta">✈ Vuelo directo ida y vuelta desde Santiago</p>
+          </div>
+          <div class="precio">
+            <p class="antes">$280.000 CLP</p>
+            <span class="sello">Oferta Relámpago</span>
+            <p class="ahora">$189.900 <small>CLP</small></p>
+            <p class="ahorro">Ahorras $90.100</p>
+            <p class="millas">o desde 18.990 millas LATAM Pass</p>
+            <a class="btn btn-coral" id="cta-principal" href="#gracias" data-destino="rio_de_janeiro">Reservar ahora</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/cusco.jpg" alt="Ruinas de Machu Picchu entre montañas, cerca de Cusco" width="560" height="320">
+          <div class="cabecera">
+            <span class="opcion">Opción 2</span>
+            <h3>Cusco, Perú</h3>
+            <p class="ruta">✈ Vuelo ida y vuelta desde Santiago</p>
+          </div>
+          <div class="precio">
+            <p class="antes">$320.000 CLP</p>
+            <span class="sello">Oferta Relámpago</span>
+            <p class="ahora">$219.900 <small>CLP</small></p>
+            <p class="ahorro">Ahorras $100.100</p>
+            <p class="millas">o desde 21.990 millas LATAM Pass</p>
+            <a class="btn btn-coral cta-principal" href="#gracias" data-destino="cusco">Reservar ahora</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <div class="contenedor">
+      <div class="beneficios">
+        <h2>¿Por qué volar con LATAM?</h2>
+        <div class="beneficio">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1b0088"/><text x="20" y="27" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff" font-family="Arial">+</text></svg>
+          <h3>Acumula Millas LATAM Pass</h3>
+          <p>Cada vuelo suma millas para tu próximo viaje.</p>
+        </div>
+        <div class="beneficio">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#3d3aff"/><path d="M12 17h13l-4-4M28 23H15l4 4" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Flexibilidad en tu compra</h3>
+          <p>Opciones de tarifa para cambiar tus planes.</p>
+        </div>
+        <div class="beneficio">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#e8114b"/><circle cx="20" cy="20" r="9" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M11 20h18M20 11c-4 5-4 13 0 18M20 11c4 5 4 13 0 18" stroke="#fff" stroke-width="2" fill="none"/></svg>
+          <h3>La red más conectada de Sudamérica</h3>
+          <p>Más destinos para seguir viajando.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cierre">
+    <div class="contenedor">
+      <h2>Tu Oferta Relámpago se acaba pronto</h2>
+      <p>Quedan <strong id="horas-cierre">47</strong> horas. Elige tu destino antes de que el contador llegue a cero.</p>
+      <div class="botones-cierre">
+        <a class="btn btn-coral cta-principal" href="#gracias" data-destino="rio_de_janeiro">Reservar ahora · Río</a>
+        <a class="btn btn-coral cta-principal" href="#gracias" data-destino="cusco">Reservar ahora · Cusco</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="contenedor">
+    <p class="aviso">Proyecto académico ficticio del Taller de Marketing Analytics (Magíster). No es una oferta real ni está afiliado a LATAM Airlines Group.</p>
+    <p>Precios y millas son ejemplos ilustrativos. Este sitio no vende pasajes ni recoge datos personales; usa Google Analytics para medir visitas y clics de forma agregada.</p>
+    <p>Fotos: Unsplash (licencia Unsplash).</p>
+  </div>
+</footer>
+
+<!-- Página de gracias: simula la confirmación de la reserva -->
+<div id="gracias" role="dialog" aria-modal="true" aria-labelledby="gracias-titulo">
+  <div class="gracias-caja">
+    <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#e8114b"/><path d="M17 29l7 7 15-16" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h2 id="gracias-titulo">¡Gracias por elegir tu oferta!</h2>
+    <p id="gracias-destino">Recibimos tu interés en esta Oferta Relámpago.</p>
+    <p class="nota">Esto es una simulación del Taller de Marketing Analytics: no se realizó ninguna compra ni se guardó ningún dato tuyo.</p>
+    <a class="btn btn-coral" href="#ofertas" id="cerrar-gracias">Volver a las ofertas</a>
+  </div>
+</div>
+
+<script>
+  // Cuenta regresiva de 48 horas desde la primera visita de este navegador
+  (function () {
+    var limite;
+    try {
+      limite = Number(localStorage.getItem('oferta_limite'));
+      if (!limite) {
+        limite = Date.now() + 48 * 60 * 60 * 1000;
+        localStorage.setItem('oferta_limite', limite);
+      }
+    } catch (e) {
+      limite = Date.now() + 48 * 60 * 60 * 1000;
+    }
+    function dosDigitos(n) { return n < 10 ? '0' + n : String(n); }
+    function actualizar() {
+      var resto = Math.max(0, limite - Date.now());
+      var h = Math.floor(resto / 3600000);
+      var m = Math.floor(resto % 3600000 / 60000);
+      var s = Math.floor(resto % 60000 / 1000);
+      document.getElementById('horas').textContent = dosDigitos(h);
+      document.getElementById('minutos').textContent = dosDigitos(m);
+      document.getElementById('segundos').textContent = dosDigitos(s);
+      document.getElementById('horas-cierre').textContent = h;
+    }
+    actualizar();
+    setInterval(actualizar, 1000);
+  })();
+
+  // Muestra la página de gracias sin salir del sitio
+  (function () {
+    var nombres = { rio_de_janeiro: 'Río de Janeiro', cusco: 'Cusco' };
+    var gracias = document.getElementById('gracias');
+    document.querySelectorAll('#cta-principal, .cta-principal').forEach(function (boton) {
+      boton.addEventListener('click', function (e) {
+        e.preventDefault();
+        var destino = nombres[boton.dataset.destino];
+        document.getElementById('gracias-destino').textContent =
+          'Recibimos tu interés en la Oferta Relámpago a ' + destino + '.';
+        gracias.classList.add('visible');
+        document.getElementById('cerrar-gracias').focus();
+      });
+    });
+    document.getElementById('cerrar-gracias').addEventListener('click', function () {
+      gracias.classList.remove('visible');
+    });
+  })();
+</script>
+
+<script>
+  // Envía el evento clic_cta_principal cuando el visitante hace clic en el CTA
+  document.querySelectorAll('#cta-principal, .cta-principal').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      if (typeof gtag !== 'function') return;
+      var seccion = boton.closest('section');
+      gtag('event', 'clic_cta_principal', {
+        ubicacion: seccion && seccion.id ? seccion.id : 'sin_seccion',
+        destino: boton.dataset.destino
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
